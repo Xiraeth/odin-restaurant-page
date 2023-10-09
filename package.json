@@ -1,0 +1,35 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "A simple home page for a restaurant, part of The Odin Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xiraeth/odin-restaurant-page.git"
+  },
+  "keywords": [
+    "restaurant",
+    "home-page",
+    "webpack",
+    "bundling",
+    "gitHub"
+  ],
+  "author": "Xiraeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xiraeth/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/Xiraeth/odin-restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
