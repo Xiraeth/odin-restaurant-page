@@ -1,1 +1,2 @@
-# odin-restaurant-page
+# Restaurant page  
+Using webpack to bundle the code
