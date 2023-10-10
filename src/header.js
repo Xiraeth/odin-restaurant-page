@@ -1,47 +1,17 @@
-/*
-<div class="header">
-  <h1>Astrochilling</h1>
-  <div class="header-links">
-    <div class="home">Home</div>
-    <div class="Menu">Menu</div>
-    <div class="contact">Contact</div>
-  </div>
-</div>
-*/
-
 export default function createHeader() {
-  const headerDiv = document.createElement("section");
-  headerDiv.classList.add("header");
-  const h1 = document.createElement("h1");
-  h1.textContent = "Astrochilling";
-  headerDiv.appendChild(h1);
+  const markup = `
+  <section class="header">
+    <h1>Astrochilling</h1>
+    <section class="header-links">
+      <div class="home header-link activeTab">Home</div>
+      <div class="menu header-link">Menu</div>
+      <div class="contact header-link">Contact</div>
+    </section>
+  </section>
+  `;
+  document.body.insertAdjacentHTML("afterbegin", markup);
 
-  // Header links
-  const headerLinksDiv = document.createElement("nav");
-  headerLinksDiv.classList.add("header-links");
-
-  const homeDiv = document.createElement("div");
-  homeDiv.classList.add("home");
-  homeDiv.classList.add("header-link");
-  homeDiv.classList.add("activeTab");
-  homeDiv.textContent = "Home";
-
-  const menuDiv = document.createElement("div");
-  menuDiv.classList.add("menu");
-  menuDiv.classList.add("header-link");
-  menuDiv.textContent = "Menu";
-
-  const contactDiv = document.createElement("div");
-  contactDiv.classList.add("contact");
-  contactDiv.classList.add("header-link");
-  contactDiv.textContent = "Contact";
-
-  headerLinksDiv.appendChild(homeDiv);
-  headerLinksDiv.appendChild(menuDiv);
-  headerLinksDiv.appendChild(contactDiv);
-
-  headerDiv.appendChild(headerLinksDiv);
-
+  const headerLinksDiv = document.querySelector(".header-links");
   headerLinksDiv.addEventListener("click", (e) => {
     const target = e.target.closest(".header-link");
     if (!target) return;
@@ -53,6 +23,4 @@ export default function createHeader() {
     });
     target.classList.add("activeTab");
   });
-
-  document.body.insertAdjacentElement("afterbegin", headerDiv);
 }

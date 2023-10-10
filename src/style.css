@@ -92,33 +92,65 @@ body {
 }
 
 .category {
-  min-height: 700px;
+  /* min-height: 700px; */
   width: 60%;
   margin: 2rem auto;
+
   background-color: var(--menu-bg);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* justify-items: center; */
 }
 
 .category h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   font-style: italic;
   grid-column: 1 / span 2;
-  padding: 1rem 0;
+  padding: 2rem 0;
   height: 50%;
-  /* width: 100%; */
   font-size: 3rem;
   background-color: var(--menu-titles-bg);
   color: var(--menu-titles);
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.category div {
+.category h2:hover {
+  transform: scale(1.05);
+}
+
+.beveragesCategoryContent,
+.mainDishesCategoryContent,
+.dessertsCategoryContent {
+  color: royalblue;
+  height: 500px;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  transition: all 1s;
+}
+
+.category > div > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  background-color: rgba(228, 228, 228, 0.8);
+  border-radius: 2rem;
+}
+
+.category > div > div > div:first-child {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 0 3rem;
+}
+
+.category > div > div > div:last-child {
+  font-size: 1.5rem;
+  padding: 0 3rem;
+}
+
+.hidden {
+  display: none;
 }
