@@ -80,10 +80,10 @@ export default function createMenuPage() {
   `;
   content.insertAdjacentHTML("beforeend", markup);
   content.addEventListener("click", (e) => {
-    const categoryContent = e.target.nextSibling.nextSibling;
-    if (!categoryContent) return;
+    const categoryTitle = e.target.closest(".content > section > h2");
+    if (!categoryTitle) return;
 
-    categoryContent.style.transition = "display 1s";
+    const categoryContent = categoryTitle.nextSibling.nextSibling;
 
     if (categoryContent.style.display == "")
       categoryContent.style.display = "grid";

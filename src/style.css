@@ -128,7 +128,6 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
-  transition: all 1s;
 }
 
 .category > div > div {
@@ -141,6 +140,7 @@ body {
 }
 
 .category > div > div > div:first-child {
+  color: rgb(33, 88, 160);
   font-weight: bold;
   font-size: 3rem;
   padding: 0 3rem;
