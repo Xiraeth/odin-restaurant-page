@@ -5,12 +5,22 @@
 
 :root {
   font-size: 16px;
+  --header-bg-color: rgba(90, 73, 238, 1);
+  --header-title-color: rgb(78, 211, 167);
+  --header-links-inactive: rgb(12, 151, 98);
+  --header-links-hover: rgb(16, 204, 173);
+  --header-links-active: rgb(41, 255, 209);
+  --menu-titles-bg: rgb(56, 102, 189);
+  --menu-bg: rgb(56, 102, 189, 0.5);
+  --menu-titles: rgb(5, 255, 159);
 }
 
 body {
-  max-height: 100vh;
+  min-height: 100vh;
   background-image: url("bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -23,19 +33,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(90, 73, 238, 0.7);
+  background-color: var(--header-bg-color);
 }
 
 .header h1 {
   padding-left: 5rem;
-  color: rgb(78, 211, 167);
+  color: var(--header-title-color);
   font-size: 4rem;
   font-style: italic;
 }
 
 .header-links {
   font-size: 2rem;
-  color: mediumspringgreen;
+  color: var(--header-links-inactive);
   padding-right: 5rem;
   display: flex;
   justify-content: space-around;
@@ -47,13 +57,15 @@ body {
   cursor: pointer;
 }
 
-.header-links div:hover {
-  color: rgb(14, 173, 54);
+.header-links div:hover:not(.activeTab) {
+  color: var(--header-links-hover);
+}
+
+.activeTab {
+  color: var(--header-links-active);
 }
 
 .main {
-  position: relative;
-  top: 100px;
   min-height: 500px;
   width: 50%;
   margin: auto;
@@ -74,14 +86,39 @@ body {
   font-style: italic;
 }
 
-.activeTab {
-  color: rgb(14, 173, 54);
-}
-
-.menuContainer {
-  width: 70%;
-}
-
 .content {
-  display: ;
+  position: relative;
+  top: 100px;
+}
+
+.category {
+  min-height: 700px;
+  width: 60%;
+  margin: 2rem auto;
+  background-color: var(--menu-bg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* justify-items: center; */
+}
+
+.category h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  grid-column: 1 / span 2;
+  padding: 1rem 0;
+  height: 50%;
+  /* width: 100%; */
+  font-size: 3rem;
+  background-color: var(--menu-titles-bg);
+  color: var(--menu-titles);
+}
+
+.category div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

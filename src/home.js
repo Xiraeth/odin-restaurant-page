@@ -9,7 +9,7 @@ export default function homePage() {
   content.innerHTML = "";
 
   // Main div
-  const mainDiv = document.createElement("div");
+  const mainDiv = document.createElement("section");
   mainDiv.classList.add("main");
   const h2 = document.createElement("h2");
   h2.textContent = `Placeholder text for something actually important`;

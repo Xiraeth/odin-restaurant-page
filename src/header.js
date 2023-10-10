@@ -10,14 +10,14 @@
 */
 
 export default function createHeader() {
-  const headerDiv = document.createElement("div");
+  const headerDiv = document.createElement("section");
   headerDiv.classList.add("header");
   const h1 = document.createElement("h1");
   h1.textContent = "Astrochilling";
   headerDiv.appendChild(h1);
 
   // Header links
-  const headerLinksDiv = document.createElement("div");
+  const headerLinksDiv = document.createElement("nav");
   headerLinksDiv.classList.add("header-links");
 
   const homeDiv = document.createElement("div");
