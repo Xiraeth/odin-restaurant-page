@@ -15,6 +15,7 @@ body {
 
 .header {
   position: fixed;
+  z-index: 1;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -75,4 +76,12 @@ body {
 
 .activeTab {
   color: rgb(14, 173, 54);
+}
+
+.menuContainer {
+  width: 70%;
+}
+
+.content {
+  display: ;
 }

@@ -1,3 +1,1 @@
-export default function menuPage(content) {
-  content.innerHTML = "";
-}
+export default function menuPage() {}
