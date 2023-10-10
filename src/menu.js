@@ -79,15 +79,4 @@ export default function createMenuPage() {
   </section>
   `;
   content.insertAdjacentHTML("beforeend", markup);
-  content.addEventListener("click", (e) => {
-    const categoryTitle = e.target.closest(".content > section > h2");
-    if (!categoryTitle) return;
-
-    const categoryContent = categoryTitle.nextSibling.nextSibling;
-
-    if (categoryContent.style.display == "")
-      categoryContent.style.display = "grid";
-    else if (categoryContent.style.display == "grid")
-      categoryContent.style.display = "";
-  });
 }

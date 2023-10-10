@@ -10,17 +10,4 @@ export default function createHeader() {
   </section>
   `;
   document.body.insertAdjacentHTML("afterbegin", markup);
-
-  const headerLinksDiv = document.querySelector(".header-links");
-  headerLinksDiv.addEventListener("click", (e) => {
-    const target = e.target.closest(".header-link");
-    if (!target) return;
-
-    const headerLinks = document.querySelectorAll(".header-links div");
-    headerLinks.forEach((link) => {
-      if (link.classList.contains("activeTab"))
-        link.classList.remove("activeTab");
-    });
-    target.classList.add("activeTab");
-  });
 }
