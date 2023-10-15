@@ -4,7 +4,7 @@ export default function createHomePage() {
 
   const markup = `
   <section class="main">
-    <h2>My artistic web design skills suck.</h2>
+    <h2>Placeholder for a text and maybe an image of the restaurant</h2>
   </section>`;
 
   content.insertAdjacentHTML("afterbegin", markup);
