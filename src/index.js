@@ -4,8 +4,8 @@ import createHomePage from "./home";
 import createMenuPage from "./menu";
 import createContactPage from "./contact";
 
-createHeader();
 createHomePage();
+createHeader();
 
 const content = document.querySelector(".content");
 const homeBtn = document.querySelector(".home");
